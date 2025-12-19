@@ -16,10 +16,13 @@ header {
   text-align: center;
 }
 
-/* CV Button */
+/* CV Buttons */
+.cv-buttons {
+  margin-top: 15px;
+}
 .cv-button {
   display: inline-block;
-  margin-top: 10px;
+  margin: 5px;
   padding: 10px 20px;
   background: #1abc9c;
   color: #fff;
