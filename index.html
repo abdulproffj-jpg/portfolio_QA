@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mohammad Abdul Nadeem - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Mohammad Abdul Nadeem</h1>
+    <p>Email: abdul.proffj@gmail.com | Mobile: +852 56433149 | Hong Kong</p>
+    <!-- Download CV Button -->
+    <a href="assets/Mohammad_Abdul_Nadeem_CV.pdf" class="cv-button" download>Download CV</a>
+  </header>
+
+  <!-- Professional Summary -->
+  <section>
+    <h2>Professional Summary</h2>
+    <p>Automation Testing Expert with 11+ years of IT experience in web, mobile, and API testing. Skilled in Selenium, Appium, Python, CI/CD tools, and CRM platforms. Experienced across Malaysia, UAE, and Hong Kong with strong SDLC/STLC and Agile knowledge.</p>
+  </section>
+
+  <!-- Skills -->
+  <section>
+    <h2>Skills</h2>
+    <ul>
+      <li>Python, SQL</li>
+      <li>Selenium, Appium</li>
+      <li>TestNG, BDD Cucumber</li>
+      <li>API Testing</li>
+      <li>Jenkins, Git, JIRA, Postman</li>
+      <li>MySQL, Oracle</li>
+      <li>Power BI, Agile, Scrum</li>
+    </ul>
+  </section>
+
+  <!-- Dashboard -->
+  <section id="dashboard">
+    <h2>Dashboard</h2>
+    <div class="chart-container small-chart">
+      <h3>Skills Distribution</h3>
+      <canvas id="skillsChart"></canvas>
+    </div>
+    <div class="chart-container small-chart">
+      <h3>Domain Experience</h3>
+      <canvas id="domainChart"></canvas>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Mohammad Abdul Nadeem | <a href="https://github.com/yourusername">GitHub</a> | <a href="https://linkedin.com/in/yourprofile">LinkedIn</a></p>
+  </footer>
+
+  <!-- Chart.js Script -->
+  <script>
+    // Skills Pie Chart
+    const skillsCtx = document.getElementById('skillsChart').getContext('2d');
+    new Chart(skillsCtx, {
+      type: 'pie',
+      data: {
+        labels: ['Python', 'SQL', 'Selenium', 'Appium', 'TestNG/BDD Cucumber', 'API Testing'],
+        datasets: [{
+          data: [90, 85, 95, 80, 75, 88],
+          backgroundColor: ['#1abc9c', '#3498db', '#9b59b6', '#f39c12', '#e74c3c', '#2ecc71']
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { position: 'bottom' }
+        }
+      }
+    });
+
+    // Domain Donut Chart
+    const domainCtx = document.getElementById('domainChart').getContext('2d');
+    new Chart(domainCtx, {
+      type: 'doughnut',
+      data: {
+        labels: ['Automation Testing', 'CRM Platforms', 'DevOps & CI/CD', 'Data Validation', 'Visualization'],
+        datasets: [{
+          data: [40, 20, 15, 15, 10],
+          backgroundColor: ['#e74c3c', '#2ecc71', '#f1c40f', '#2980b9', '#8e44ad']
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { position: 'bottom' }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
